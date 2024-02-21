@@ -1,9 +1,9 @@
 {
-  "hub" : "http://10.0.0.34:4444/ui",
-  "url":"John",
+  "hub" : "http://10.0.0.34:4444",
+  "url":"https://www.365scores.com/he",
   "grid": true,
   "parallel": true,
   "browser": "chrome",
   "platform": "windows",
-  "browser_types": ["chrome", "firefox", "edge"]
+  "browser_types": ["chrome", "firefox"]
 }

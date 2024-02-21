@@ -1,4 +1,5 @@
 import json
+import time
 from os.path import dirname, join
 
 from selenium import webdriver
@@ -26,13 +27,14 @@ class BrowserWrapper:
                 self.driver = webdriver.Firefox()
             elif browser_type.lower() == 'edge':
                 self.driver = webdriver.Edge()
-            url = self.config["url"]
-            self.driver.get(url)
+        url = self.config["url"]
+        self.driver.get(url)
+        time.sleep(4)
         return self.driver
 
     def close_browser(self):
         if self.driver:
-            self.driver.quit()
+            self.driver.close()
 
     def set_up_capabilities(self, browser_type):
         if browser_type.lower() == 'chrome':
@@ -58,3 +60,8 @@ class BrowserWrapper:
         here = dirname(__file__)
         output = join(here, filename)
         return output
+    def is_grid(self):
+        return self.config['grid']
+
+    def get_browser(self):
+        return self.config['browser']
