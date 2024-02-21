@@ -1,0 +1,9 @@
+{
+  "hub" : "http://10.0.0.34:4444/ui",
+  "url":"John",
+  "grid": true,
+  "parallel": true,
+  "browser": "chrome",
+  "platform": "windows",
+  "browser_types": ["chrome", "firefox", "edge"]
+}
