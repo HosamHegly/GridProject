@@ -1,8 +1,8 @@
 {
   "hub" : "http://10.0.0.34:4444",
   "url":"https://www.365scores.com/he",
-  "grid": true,
-  "parallel": true,
+  "grid": false,
+  "parallel": false,
   "browser": "chrome",
   "platform": "windows",
   "browser_types": ["chrome", "firefox"]

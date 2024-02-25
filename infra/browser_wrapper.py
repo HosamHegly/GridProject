@@ -6,14 +6,12 @@ from selenium import webdriver
 
 
 class BrowserWrapper:
-    FILE_PATH = "config.json"
 
     def __init__(self):
         self.driver = None
-        filename = self.get_filename("config.json")
+        filename = self.get_filename("../config.json")
         with open(filename, 'r') as file:
             self.config = json.load(file)
-        self.parallel = self.config["parallel"]
 
     def get_driver(self, browser):
         browser_type = self.config["browser"]
@@ -29,7 +27,7 @@ class BrowserWrapper:
                 self.driver = webdriver.Edge()
         url = self.config["url"]
         self.driver.get(url)
-        time.sleep(4)
+        time.sleep(3)
         return self.driver
 
     def close_browser(self):
