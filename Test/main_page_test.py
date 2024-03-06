@@ -36,6 +36,15 @@ class mainPageTest(unittest.TestCase):
         url = self.main_page.get_current_url()
         self.assertEqual(url, "https://www.365scores.com/he/hockey")
 
+    def test_search_field_result_madrid(self):
+        self.main_page.choose_team_from_search_field('ריאל')
+        self.assertTrue(self.main_page.get_teams('ריאל'))
+
+    def test_search_field_result_israel(self):
+        self.main_page.choose_team_from_search_field('ישראל')
+        self.assertTrue(self.main_page.get_teams('ישראל'))
+
+
 
 
     def tearDown(self):
